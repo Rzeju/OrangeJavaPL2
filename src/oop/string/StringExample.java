@@ -26,6 +26,7 @@ public class StringExample {
 
         myString.intern();
 
+        System.out.println("myString" + myString);
         System.out.println("Długość myString = " + myString.length());
         System.out.println("myString upperCase() = " + myString.toUpperCase());
         System.out.println("myString isBlank() = " + myString.isBlank());
@@ -36,5 +37,10 @@ public class StringExample {
         System.out.println("Metoda isBlank()");
         System.out.println("".isBlank());
         System.out.println("     ".isBlank());
+
+
+        System.out.println("myStringObject = " + myStringObject);
+        System.out.println("myStringObject indexOf('my') = " + myStringObject.indexOf("my"));
+        System.out.println(myStringObject.substring(8));
     }
 }
