@@ -1,5 +1,6 @@
 package date_time;
 
+import java.time.Instant;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
@@ -27,8 +28,14 @@ public class DateTimeExample {
         System.out.println("Local Date Time = " + localDateTime);
         System.out.println("Plus 3 weeks = " + localDateTime.plusWeeks(3));
 
-
+        //Przykład formatowania
         String myFormattedDate = localDateTime.format(DateTimeFormatter.ISO_WEEK_DATE);
         System.out.println("ISO WEEK DATE format = " + myFormattedDate);
+
+
+        //Przykład użycia klasy Instant i zamiana sekund od Epoch Time do dziś na dni
+        Instant instant = Instant.now();
+        System.out.println("Instant now = " + instant.getEpochSecond());
+        System.out.println("Days since Epoch Time = " + instant.getEpochSecond() / 60 / 60 / 24 / 365);
     }
 }
