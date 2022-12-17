@@ -3,6 +3,7 @@ package date_time;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 
 public class DateTimeExample {
 
@@ -25,5 +26,9 @@ public class DateTimeExample {
         LocalDateTime localDateTime = LocalDateTime.now();
         System.out.println("Local Date Time = " + localDateTime);
         System.out.println("Plus 3 weeks = " + localDateTime.plusWeeks(3));
+
+
+        String myFormattedDate = localDateTime.format(DateTimeFormatter.ISO_WEEK_DATE);
+        System.out.println("ISO WEEK DATE format = " + myFormattedDate);
     }
 }
