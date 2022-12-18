@@ -10,4 +10,15 @@ public class VarargsExample {
             System.out.println("Metoda varArgs - element = " + numbers[i]);
         }
     }
+
+    //metoda statyczna z jednym stałym argumenetm oraz z argumentem przyjmującym zmienną liczbię parametrów
+    //stały argument 'firstArgument' nie będzie częścią tablicy 'numbers' zawierającej resztę wprowadzonych argumentów
+    //metodę tę można wywołać podając jeden lub więcej argumentów (przynajmniej jeden argument)
+    public static void backwardsLoop(int firstArgument, int... numbers) {
+        System.out.println("Stały argument = " + firstArgument);
+        for (int i = numbers.length - 1; i >= 0; i--) {
+            System.out.println("Backwards loop - element = " + numbers[i]);
+        }
+
+    }
 }
